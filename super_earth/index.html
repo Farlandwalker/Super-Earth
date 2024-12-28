@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <title>Super Earth Democracy Sports Charity Platform</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="index-page">
+
+    <header class="dark text-white p-3 header-container">
+        <img src="images/logo.png" alt="Freedom of Thought" class="header-logo-left">
+        <img src="images/logo.png" alt="Freedom of Thought" class="header-logo-right">
+        <div class="container">
+            <h1>Super Earth Democracy Sports Charity</h1>
+            <button id="play-audio-btn" class="btn btn-primary">Play Background Music</button>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="profile.html">Democratic User Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="volunteer.html">Volunteer Citizen Registration</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="donate.html">Donate to Citizens</a></li> 
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="login.html" id="login-link">Login</a></li> 
+                    <li class="nav-item"><a class="nav-link text-white" href="video.html" target="_blank">Promotional Video</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-5> 
+
+        <section id="charity-directory">
+            <h2>Super Earth Charity Directory</h2>
+            <input type="text" id="search-input" class="form-control" placeholder="Search charity events..." onkeyup="filterCharities()">
+            <p>Browse and search charity events.</p>
+            <div id="charity-events">
+                <h3>Past Charity Events</h3>
+                <ul id="events-list">
+                    <li>
+                        <h4>Super Earth Democracy Sprint</h4>
+                        <p><strong>Date:</strong> December 20, 2024</p>
+                        <p><strong>Goal:</strong> Support young democratic athletes in sprinting</p>
+                        <a href="charity1.html" class="btn btn-link text-danger open-new-window">View Details</a>
+                    </li>
+                    <li>
+                        <h4>Super Earth Democracy Long Run</h4>
+                        <p><strong>Date:</strong> December 20, 2024</p>
+                        <p><strong>Goal:</strong> Support young democratic athletes in long-distance running</p>
+                        <a href="charity2.html" class="btn btn-link text-danger open-new-window">View Details</a>
+                    </li>
+                    <li>
+                        <h4>Super Earth Democracy Marathon</h4>
+                        <p><strong>Date:</strong> August 20, 2024</p>
+                        <p><strong>Goal:</strong> Support young democratic athletes in the marathon</p>
+                        <a href="charity3.html" class="btn btn-link text-danger open-new-window">View Details</a>
+                    </li>
+                    <li>
+                        <h4>Super Earth Democracy Career Development Program</h4>
+                        <p><strong>Date:</strong> July 30, 2024</p>
+                        <p><strong>Goal:</strong> Help young democratic athletes plan their careers</p>
+                        <a href="charity4.html" class="btn btn-link text-danger open-new-window">View Details</a>
+                    </li>
+                    <li>
+                        <h4>Super Earth Democracy Health</h4>
+                        <p><strong>Date:</strong> June 10, 2024</p>
+                        <p><strong>Goal:</strong> Promote health for young democratic athletes.</p>
+                        <a href="charity5.html" class="btn btn-link text-danger open-new-window">View Details</a>
+                    </li>
+                </ul>
+            </div>
+        </section>                      
+
+    </main>
+
+    <footer class="dark text-white text-center p-3">
+        <p>All rights reserved (copyright statement) &copy; 2024 Super Earth Democracy Sports Charity</p>
+    </footer>
+
+    <!-- Audio playback element -->
+    <audio id="background-audio" src="mp3/liber-tea.mp3" loop></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        // Audio play button event
+        document.getElementById("play-audio-btn").addEventListener("click", function() {
+            const audio = document.getElementById("background-audio");
+            audio.play(); // Play audio after the user clicks
+            this.style.display = 'none'; // Hide the play button
+        });
+
+        // Check if the user is logged in
+        window.onload = function() {
+            const user = JSON.parse(localStorage.getItem('user'));
+            const dashboardSection = document.getElementById("dashboard");
+            const loginLink = document.getElementById("login-link");
+
+            if (user) {
+                document.getElementById("user-name").innerText = user.username;
+                document.getElementById("user-email").innerText = user.email;
+                dashboardSection.style.display = "block";
+                loginLink.style.display = "none";
+            } else {
+                dashboardSection.style.display = "none";
+                loginLink.style.display = "block";
+            }
+        };
+    </script>
+</body>
+
+</html>

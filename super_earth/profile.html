@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="charity5-page">
+    <header class="text-white p-3 header-container">
+        <img src="images/logo.png" alt="Freedom of Thought" class="header-logo-left">
+        <img src="images/logo.png" alt="Freedom of Thought" class="header-logo-right">
+        <div class="container">
+            <h1>Citizen Profile</h1>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Return to Homepage</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <section id="user-info" class="mb-5">
+            <h2>Citizen Information</h2>
+            <p><strong>Username:</strong> <span id="user-name">User</span></p>
+            <p><strong>Password:</strong> <span id="user-password">******</span></p>
+            <p><strong>Donated Amount:</strong> <span id="donation-amount">000</span></p>
+
+            <h3>Activity Participation</h3>
+            <p><strong>Completed Activities:</strong> <span id="completed-activities">Democracy Training Camp</span></p>
+            <p><strong>Upcoming Activities:</strong> <span id="upcoming-activities">Sprints Training Camp</span></p>
+        </section>
+
+        <section id="edit-profile" class="mb-5">
+            <h3>Edit Citizen Information</h3>
+            <form id="edit-form">
+                <div class="form-group">
+                    <label for="new-username">New Username:</label>
+                    <input type="text" id="new-username" name="username" class="form-control" placeholder="Change Username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="new-password">New Password:</label>
+                    <input type="password" id="new-password" name="password" class="form-control" placeholder="Change Password" required>
+                </div>
+                
+                <button type="button" class="btn btn-warning btn-block" onclick="updateProfile()">Save Changes</button>
+            </form>
+        </section>
+
+        <section id="admin-section" class="mb-5">
+            <h3>Administrator Actions</h3>
+            <button class="btn btn-warning btn-block" onclick="adminActions()">Create/Update/Delete Charity Organizations</button>
+        </section>
+    </main>
+
+    <footer class="text-white text-center p-3">
+        <p>All rights reserved (copyright statement) &copy; 2024 Super Earth Democracy Sports Charity</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

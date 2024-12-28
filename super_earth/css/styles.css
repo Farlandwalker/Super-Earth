@@ -1,0 +1,273 @@
+body.index-page main.container {
+    margin-top: 135px !important; /* Add !important to override Bootstrap's margin */
+}
+
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* 使视频自适应大小并保持边距 */
+video {
+    width: 95%;   /* 宽度占据 95% 的可视区域 */
+    height: auto; /* 高度自适应 */
+    margin: 20px auto;  /* 上下边距 20px，居中对齐 */
+    display: block;  /* 确保视频为块级元素，以便居中 */
+}
+
+/* 头部样式 */
+.header-container {
+    display: flex;
+    justify-content: space-between;  /* 保持标志图片在两边 */
+    align-items: center;  /* 垂直居中 */
+    padding-left: 50px;   /* 给左侧留出一些空间 */
+    padding-right: 50px;  /* 给右侧留出一些空间 */
+}
+
+/* 页头文字的样式 */
+header h1 {
+    flex-grow: 1;   /* 使文字部分能够占据中间的空间 */
+    text-align: center;  /* 使标题居中 */
+    margin: 0; /* 取消默认的外边距 */
+}
+
+.header-logo-left {
+    position: absolute;
+    left: 10px; /* 调整为适当的距离 */
+    top: 10px; /* 调整为适当的距离 */
+    width: 66px; /* 根据需要调整尺寸 */
+    height: auto;
+}
+
+.header-logo-right {
+    position: absolute;
+    right: 10px; /* 调整为适当的距离 */
+    top: 10px; /* 调整为适当的距离 */
+    width: 66px; /* 根据需要调整尺寸 */
+    height: auto;
+}
+
+/* 保证页头文字不被标志遮挡 */
+.header-container nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* 头部样式：黑色背景 */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+/* 头部内的导航栏样式 */
+header .nav-link {
+    color: white;
+}
+
+/* 头部导航栏的悬停效果 */
+header .nav-link:hover {
+    color: red;
+}
+
+/* 页面主体内容 */
+main {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景提升对比度 */
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* 红色主色：超链接和按钮 */
+a, button {
+    color: red;
+    text-decoration: none;
+}
+
+/* 超链接和按钮的悬停效果 */
+a:hover, button:hover {
+    color: darkred;
+}
+
+/* 尾部样式：黑色背景 */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* 标题颜色 */
+h1, h2, h3, h4 {
+    color: red;
+}
+
+/* 红色主色：按钮样式 */
+a.btn-link {
+    color: red; /* 按钮文字为红色 */
+    text-decoration: none; /* 去除链接的下划线 */
+}
+
+/* 按钮其他样式 */
+button, .btn {
+    color: red;
+    border: none;
+}
+
+button:hover, .btn:hover {
+    background-color: darkred; /* 悬停时变为暗红色 */
+    color: white; /* 保持白色文字 */
+}
+
+#play-audio-btn {
+    background-color: #000; /* 设置为黑色，或替换为头部的背景颜色 */
+    color: red; /* 设置文本为白色 */
+    border: none; /* 去除默认边框 */
+    padding: 10px 20px; /* 增加一些内边距 */
+    font-size: 22px; /* 调整字体大小 */
+    cursor: pointer; /* 鼠标悬停样式 */
+}
+
+#play-audio-btn:hover {
+    background-color: darkred; /* 悬停时稍微变亮 */
+}
+
+/* 将头部和底部设置为黑色背景 */
+header, footer {
+    background-color: #000;
+}
+/* 返回首页按钮设置为红色，悬停时变暗红 */
+.nav-link {
+    color: #ff0000;
+}
+.nav-link:hover {
+    color: #cc0000;
+}
+/* 主按钮样式设置 */
+.btn-red {
+ color: #fff;
+    background-color: #ff0000;
+    border: none;
+}
+.btn-red:hover {
+ background-color: #cc0000;
+}
+/* 固定页脚在底部 */
+body, html {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+/* 确保页脚固定在页面底部 */
+footer {
+    background-color: #000;
+    color: red;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 设置用户名和密码标签字体颜色为红色 */
+label[for="username"],
+label[for="password"],
+label[for="email"] {
+    color: #ff0000; /* 红色 */
+}
+
+/* 固定页头在屏幕顶部 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 使页头位于页面内容之上 */
+}
+
+/* 为页面内容留出顶部空间，避免被页头遮挡 */
+body {
+    padding-top: 70px; /* 根据页头的高度调整这个值 */
+}
+
+
+/*页面背景设置 */
+body.about-page {
+    background-image: url('images/us.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.index-page {
+    background-image: url('images/main-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.charity1-page {
+    background-image: url('images/Run.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+body.charity2-page {
+    background-image: url('images/Run.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+body.charity3-page {
+    background-image: url('images/Fall.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+body.charity4-page {
+    background-image: url('images/growup.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+body.charity5-page {
+    background-image: url('images/health.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+body.donate-page {
+    background-image: url('images/cash.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+body.login-page {
+    background-image: url('images/log.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+body.register-page {
+    background-image: url('images/log.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+body.volunteer-page {
+    background-image: url('images/vol.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
